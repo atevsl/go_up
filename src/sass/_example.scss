@@ -87,22 +87,65 @@ img {
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
   border-radius: 140.182px;
 }
+.about__img {
+  max-width: 278px;
+}
 .about__text1,
 .about__text2 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.76;
+
   text-align: center;
-  letter-spacing: 0.04em;
 
   color: #fcfcfc;
   max-width: 220px;
 }
 .about__text1 {
+  letter-spacing: 0.04em;
+  line-height: 1.76;
   margin-bottom: 4px;
 }
 .about__text2 {
+  line-height: 1.62;
   margin-bottom: 20px;
+}
+.about__button {
+  border: transparent;
+  background-color: #f8d24e;
+  color: #000000;
+  width: 164px;
+  height: 42px;
+  border-radius: 9px;
+  margin-bottom: 42px;
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    background-color: #0a8817;
+    outline: #0a8817;
+    color: #fcfcfc;
+  }
+  &:disabled {
+    background-color: #ababab;
+  }
+}
+.about__button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/about__arow.svg);
+    background-size: contain;
+    margin-left: 8px;
+  }
 }
