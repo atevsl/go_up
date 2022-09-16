@@ -74,6 +74,7 @@ img {
   margin-bottom: 32px;
 }
 .about__img-wrap {
+  position: relative;
   width: 278px;
   height: 278px;
 
@@ -88,6 +89,9 @@ img {
   border-radius: 140.182px;
 }
 .about__img {
+  position: absolute;
+  top: 22px;
+  left: 0;
   max-width: 278px;
 }
 .about__text1,
