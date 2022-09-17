@@ -2,11 +2,27 @@
   <p class="about__title-label">Tradition and love</p>
   <h2 class="about__title">How it’s made?</h2>
   <div class="about__img-wrap">
-    <img
-      class="about__img"
-      src="./images/about__cow.png"
-      alt="photo of a cow"
-    />
+    <picture class="about__img">
+      <source
+        srcset="
+          ./images/about__cow-desktop.png    1x,
+          ./images/about__cow-desktop-2x.png 2x
+        "
+        media="(min-width:1200px)"
+      />
+      <source
+        srcset="
+          ./images/about__cow-tab.png    1x,
+          ./images/about__cow-tab-2x.png 2x
+        "
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="./images/about__cow.png 1x, ./images/about__cow-2x.png 2x"
+        media="(max-width:767px)"
+      />
+      <img src="./images/about__cow.png" alt="photo of a cow" />
+    </picture>
   </div>
 
   <p class="about__text1">
