@@ -26,27 +26,49 @@ img {
 .container {
   width: 100%;
   padding: 0 20px;
-  padding-top: 60px;
-  margin: 0 auto;
+  margin: auto;
   @media screen and (min-width: 480px) {
     width: 480px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding: 0 32px;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
+    padding: 0 16px;
   }
 }
 
 .about {
   background-color: #84a178;
+  padding-top: 60px;
 }
 .about__wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 100px;
+    align-items: center;
+  }
+}
+.about__wrap-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__wrap-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
   }
 }
 .about__title-label {
@@ -83,24 +105,27 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fcfcfc;
-  max-width: 200px;
+  width: 200px;
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     font-size: 34px;
     letter-spacing: 0.06em;
-    max-width: 454px;
+    min-width: 456px;
     margin-bottom: 72px;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 30px;
-    max-width: 376px;
+    font-size: 36px;
+    min-width: 483px;
   }
 }
 .about__img-wrap {
   position: relative;
   width: 278px;
   height: 278px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 62px;
+
   background: linear-gradient(
       0deg,
       rgba(248, 210, 78, 0.7),
@@ -126,28 +151,135 @@ img {
   top: 22px;
   left: 0;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    top: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 39px;
+  }
 }
-.about__text1,
+
+.about__text1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 176%;
+  /* or 21px */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #fcfcfc;
+
+  margin-bottom: 4px;
+  width: 220px;
+
+  @media screen and (min-width: 768px) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 176%;
+    /* or 21px */
+
+    letter-spacing: 0.04em;
+
+    color: #fcfcfc;
+    margin-bottom: 8px;
+    text-align: start;
+
+    width: 336px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 176%;
+    /* or 28px */
+
+    letter-spacing: 0.04em;
+
+    color: #fcfcfc;
+    width: 463px;
+  }
+}
 .about__text2 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
+  line-height: 162%;
+  /* or 19px */
 
   text-align: center;
 
   color: #fcfcfc;
-  max-width: 220px;
-}
-.about__text1 {
-  letter-spacing: 0.04em;
-  line-height: 1.76;
-  margin-bottom: 4px;
-}
-.about__text2 {
-  line-height: 1.62;
+  width: 220px;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 176%;
+    /* or 21px */
+
+    letter-spacing: 0.04em;
+    text-align: start;
+    color: #fcfcfc;
+
+    width: 336px;
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 194%;
+    /* or 27px */
+
+    letter-spacing: 0.04em;
+
+    color: #fcfcfc;
+    width: 463px;
+  }
 }
+.about__text3 {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 194%;
+    /* or 23px */
+
+    letter-spacing: 0.04em;
+
+    color: #fcfcfc;
+    text-align: start;
+    width: 280px;
+    margin-bottom: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 194%;
+    /* or 27px */
+
+    letter-spacing: 0.04em;
+
+    color: #fcfcfc;
+    width: 463px;
+  }
+}
+
 .about__button {
   border: transparent;
   background-color: #f8d24e;
@@ -155,7 +287,7 @@ img {
   width: 164px;
   height: 42px;
   border-radius: 9px;
-  margin-bottom: 42px;
+
   &:hover {
     background-color: #0a8817;
   }
