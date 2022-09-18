@@ -7,6 +7,10 @@
   background: $main-text-color;
   border: 1px solid $accent-color;
   border-radius: 10px;
+  // @media screen and (min-width: 768px) {
+  //   width: 568px;
+  //   padding: 32px 60px;
+  // }
 }
 
 .read-more-modal__button {
@@ -26,12 +30,30 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  // @media screen and (min-width: 768px) {
+  //   font-family: 'Seymour One';
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   font-size: 20px;
+  //   line-height: 28px;
+  //   /* identical to box height, or 140% */
+
+  //   display: flex;
+  //   align-items: center;
+  //   text-align: center;
+
+  //   color: #131313;
+  // }
 }
 
 .read-more-modal__video {
   width: 224px;
   height: 199px;
   margin-bottom: 20px;
+  // @media screen and (min-width: 768px) {
+  //   width: 448px;
+  //   height: 205px;
+  // }
 }
 
 .read-more-modal__text {
@@ -39,4 +61,15 @@
   color: $accent-text-color;
   @include font(400, 14px, 1.4, 0);
   width: 224px;
+  // @media screen and (min-width: 768px) {
+  //   font-family: 'Montserrat';
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 140%;
+  //   /* or 22px */
+
+  //   color: #131313;
+  //   width: 448px;
+  // }
 }
