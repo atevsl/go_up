@@ -1,0 +1,36 @@
+.form-modal-window {
+  width: 100%;
+}
+@media screen and (min-width: 380px) {
+  .form-modal-window {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 380px) {
+  .ingredients-form {
+    margin: 0 auto;
+    width: 368px;
+  }
+}
+.input-modal-window {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding: 11px;
+  width: 100%;
+  &::placeholder {
+    font-family: $font-main;
+    color: $accent-text-color;
+    text-align: center;
+    align-items: center;
+  }
+}
+і на вікно модальне .modal-window {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $main-text-color;
+  border: 2px solid $accent-color;
+  border-radius: 10px;
+  padding: 28px 20px 32px;
+}
