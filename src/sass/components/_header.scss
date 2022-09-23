@@ -9,6 +9,7 @@
 
 .header-container {
   display: flex;
+  padding-top: 10px;
 }
 
 .header-logo {
@@ -60,14 +61,6 @@
 
 .menu-logo {
   display: flex;
-  margin-top: 12px;
-  margin-left: 31px;
-
-  @include tablet {
-    display: flex;
-    margin-top: 20px;
-    margin-left: 32px;
-  }
 }
 .menu-btn {
   display: none;
@@ -76,14 +69,14 @@
     display: flex;
     margin-left: auto;
     margin-top: 24px;
-    margin-right: 32px;
+    // margin-right: 32px;
     margin-left: 0;
   }
 
   @include desktop {
     display: flex;
     margin-left: auto;
-    margin-right: 16px;
+    // margin-right: 16px;
     margin-top: 28px;
   }
 }
@@ -93,21 +86,30 @@
 
   @include tablet {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     // margin-top: 24px;
     font-size: 14px;
     font-weight: 600;
     width: 152px;
     height: 42px;
-    padding: 12px 34px 12px 34px;
+    // padding: 12px 34px 12px 34px;
     background-color: $accent-color;
-    color: $accent-text-color;
-    fill: $accent-text-color;
+    // color: $accent-text-color;
+    // fill: $accent-text-color;
+
+    // fill: currentColor;
+
     border-radius: 10px;
     border: none;
+
+    border: 2px solid $accent-color;
+
     margin-left: auto;
     margin-right: auto;
+
+    cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
+    
 
     //     padding-left: 6px;
     //     cursor: pointer;
@@ -115,29 +117,58 @@
     //     margin-right: auto;
     //     margin-top: 20px;
     //   }
+
+
+    // &:hover {
+    //   border: 2px solid $hover-color;
+    //   // border-color: $hover-color;
+    // }
+
+    // &:focus {
+    //   background-color: $hover-color;
+    //   color: $main-text-color;
+    // }
   }
+
+
 
   @include desktop {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     // margin-top: 24px;
     font-size: 14px;
     font-weight: 600;
     width: 152px;
     height: 42px;
-    padding: 12px 34px 12px 34px;
+    // padding: 12px 34px 12px 34px;
     background-color: $accent-color;
-    color: $accent-text-color;
-    fill: $accent-text-color;
+    // color: $accent-text-color;
+    // fill: $accent-text-color;
+
+    // fill: currentColor;
+
     border-radius: 10px;
     border: none;
     margin-left: auto;
     margin-right: auto;
+    cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
   }
 }
+
+.navigation__button {
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:focus {
+    background-color: $hover-color;
+    color: $main-text-color;
+  }
+} 
+
 .nav-btn-icon {
   margin-left: 7.23px;
+  fill: currentColor;
 }
 
 .menu-open-btn {
@@ -146,10 +177,12 @@
   // margin-right: 26px;
   background-color: transparent;
   border: none;
+  cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
 
   @include tablet {
     margin-right: 32px;
     margin-left: auto;
+    cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
     // margin-top: 39px;
   }
 
@@ -159,6 +192,7 @@
 }
 
 .content-menu {
+  padding-top: 10px;
   position: absolute;
   top: 0;
   z-index: 5;
@@ -171,8 +205,7 @@
   font-weight: 700;
   color: $main-text-color;
   transform: translateX(0);
-  opacity: 1;
-  transition: transform 400ms linear, opacity 400ms linear;
+  transition: transform 400ms linear;
 
   @include tablet {
     position: absolute;
@@ -184,8 +217,7 @@
     font-weight: 700;
     color: $main-text-color;
     transform: translateX(0%);
-    opacity: 1;
-    transition: transform 400ms linear, opacity 400ms linear;
+    transition: transform 400ms linear;
   }
 
   @include desktop {
@@ -196,13 +228,11 @@
 .menu-close-btn {
   display: flex;
   margin-left: auto;
-  margin-top: 16px;
-  margin-right: 20px;
+  margin-top: 33px;
+  margin-right: 4px;
   background-color: transparent;
   border: none;
-  //   width: 32px;
-  //   height: 32px;
-  //   padding-top: 12px;
+  cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
 
   @include tablet {
     display: flex;
@@ -211,6 +241,7 @@
     margin-right: 32px;
     background-color: transparent;
     border: none;
+    cursor: url(../images/cursor.png), url(../images/cursor-1.cur), default;
   }
 }
 
@@ -287,6 +318,5 @@
 
 .content-menu.is-hidden {
   transform: translateX(100%);
-  opacity: 0;
-  transition: transform 400ms linear, opacity 400ms linear;
+  transition: transform 400ms linear;
 }
